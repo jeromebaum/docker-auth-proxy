@@ -1,0 +1,4 @@
+#!/bin/bash -ex
+rm -f /etc/nginx/sites-enabled/default
+sed -i 's!TARGET!'${TARGET_PORT_80_TCP/tcp/http}'!' /etc/nginx/sites-enabled/proxy-site
+nginx
